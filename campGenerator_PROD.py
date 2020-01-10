@@ -516,13 +516,5 @@ for i in range(0, numCamps):
     }
     
     x = json.dumps(camp)
-    if DEV:
-        r = requests.post('https://bl3csev0pi.execute-api.us-east-1.amazonaws.com/dev/v1/send', x)
-        print(r)
-    if QA:
-       r = requests.post('https://bl3csev0pi.execute-api.us-east-1.amazonaws.com/qa/v1/send', x)
-       print(r)
-    if PROD and states == "Alaska":                # NO CRM, and must by Alaska
-       r = requests.post('https://bl3csev0pi.execute-api.us-east-1.amazonaws.com/LIVE/v1/send',x)
-       print(r)
+   # Send to API gateways here --------
     
